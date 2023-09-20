@@ -8,11 +8,11 @@ class item{
     }
 }
 
-const burguer= new item ("Hamburguesa",150,"hamburguesa.png");
-const pizza = new item ("Pizza",250,"pizza.png");
+const burguer= new item ("Hamburguesa",150,"pexels-oleksandr-p-12932961 (1).jpg");
+const pizza = new item ("Pizza",250,"pizza.jpg");
 const refresco = new item ("Gaseosa",70,"gaseosa.png");
-const empanada = new item ("Empanada",50,"empanada.png");
-const papasfritas = new item ("Papas fritas",80,"fritas.png");
+const empanada = new item ("Empanada",50,"empanadas.jpg");
+const papasfritas = new item ("Papas fritas",80,"rsz_1pexels-pablo-alberto-14696271 (1).jpg");
 const tiramisu = new item ("Tiramisú",130,"tiramisu.png");
 
 const pedido = [];
@@ -50,7 +50,7 @@ function actualizarHTML(){
     for (const menu of pedido ){
         
         const indice = pedido.indexOf(menu);
-        const li = `<li onclick="vender('${menu.nombre}')">${menu.nombre} $${menu.precio} `;
+        const li = `<li onclick="borrar('${menu.nombre}')">${menu.nombre} $${menu.precio} `;
         elpedido.innerHTML += li;  
         
     }

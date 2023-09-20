@@ -35,12 +35,22 @@ function comprar(menu) {
 
 }
 
+function borrar(nombredepedido) {
+    const pedidoEncontrado = pedido.find((item) => item.nombre === nombredepedido);
+    if (pedidoEncontrado) {
+        dinero += pedidoEncontrado.precio;
+        pedido.splice(pedido.indexOf(pedidoEncontrado), 1);
+        actualizarHTML();
+    }   
+}
+
 function actualizarHTML(){
     eldinero.innerText = dinero;
     elpedido.innerHTML="";
     for (const menu of pedido ){
+        
         const indice = pedido.indexOf(menu);
-        const li = `<li>${menu.nombre} $${menu.precio} `;
+        const li = `<li onclick="vender('${menu.nombre}')">${menu.nombre} $${menu.precio} `;
         elpedido.innerHTML += li;  
         
     }

@@ -30,8 +30,40 @@
 	right: 5px;
 }
 
+.letra{
+	color: aliceblue;
+	font: 18px;
+}
+
 .img{
 	width: 200px;
 	height: 200px;
+	transition: transform 0.3s ease;
+	cursor: pointer; 
+	
 }
 
+img:hover {
+	transform: scale(1.1);
+}
+
+.bordes{
+	width: 200px;
+	height: 200px;	
+	overflow: hidden;
+}
+.bordes img{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	border: 2px solid whitesmoke;
+	border-radius: 50%;
+}
+
+li{
+	list-style: none;
+}
+.letrapedido{
+	color: aliceblue;
+	font: 10px;
+}

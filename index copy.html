@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XXXXXXXX">
+    <meta name="keywords" content="XXXXXXX">
+    <title>My.resto</title>
+    <link rel="shortcut icon" href="asset/my.restoredondo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    <title>Document</title>
+</head>
+<body class="bgcolor">
+    <header>
+        <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="asset/my.restoredondo.png" width="100px" height="100px" alt="logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Pages/Productos.html">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Pages/Sobre_nosotros.html">Sobre nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Pages/Contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>	
+      <input id="Buscador" type="text" placeholder="Qué quieres comer?">
+      <div>
+        <h1 class="letra offset-sm-2 mt-2">Bienvenido, qué te gustaría comer?</h1>
+      </div>
+      <section class="container-fluid row mt-5 ">
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/pexels-oleksandr-p-12932961 (1).jpg" class="card-img-top"  alt="hamburguesa" onclick="comprar(burguer)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/rsz_1pexels-pablo-alberto-14696271 (1).jpg" class="card-img-top"  alt="Papas fritas" onclick="comprar(papasfritas)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/pizza.jpg" class="card-img-top"  alt="pizza" onclick="comprar(pizza)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/gaseosa.jpg" class="card-img-top"  alt="Coca cola" onclick="comprar(refresco)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/empanadas.jpg" class="card-img-top"  alt="empanada" onclick="comprar(empanada)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes" >
+          <li><img src="/asset/tiramisu.jpg" class="card-img-top"  alt="Tiramisú" onclick="comprar(tiramisu)"></li>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="letra"> Mi pedido:</h2>
+        <ul class="letrapedido" id="pedido">
+          <li></li>
+        </ul>
+        <ul>
+        <h2 class="letra" id="dinero">Dinero: <span></span>
+        </h2>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div class="mt-5">
+      </div>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/script_preentrega3.js"></script>
+
+</body>
+</html>

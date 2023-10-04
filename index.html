@@ -35,21 +35,67 @@
             </div>
           </nav>
     </header>
-
     <main>	
-        <div>
-        
+      <div>
+        <h1 class="letra offset-sm-2 mt-2">Bienvenido, qué te gustaría comer?</h1>
+        <input  type="text" id="buscador"  class="offset-sm-2 mt-2 bgcolor letra" placeholder="Haz tu búsqueda">
+      </div>
+      <div id="productos">
+
+      </div>
+      <section>
+        <h2> <span id="Cantidadcarrito"> 0 </span></h2>
+        <div id="carrito"></div> aca va producto carrito
+        <h2>Total: $ <span id="totalcarrito"> 0 </span></h2>
+
+      </section>
+
+
+
+
+      <section class="container-fluid row mt-5 ">
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/pexels-oleksandr-p-12932961 (1).jpg" class="card-img-top"  alt="hamburguesa" onclick="comprar(burguer)"></li>
+          </div>
         </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/rsz_1pexels-pablo-alberto-14696271 (1).jpg" class="card-img-top"  alt="Papas fritas" onclick="comprar(papasfritas)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/pizza.jpg" class="card-img-top"  alt="pizza" onclick="comprar(pizza)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/gaseosa.jpg" class="card-img-top"  alt="Coca cola" onclick="comprar(refresco)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes">
+          <li><img src="/asset/empanadas.jpg" class="card-img-top"  alt="empanada" onclick="comprar(empanada)"></li>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 offset-sm-2 mb-5 mt-5 img bordes" >
+          <li><img src="/asset/tiramisu.jpg" class="card-img-top"  alt="Tiramisú" onclick="comprar(tiramisu)"></li>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="letra"> Mi pedido:</h2>
+        <ul class="letrapedido" id="pedido">
+          <li></li>
+        </ul>
+        <ul>
+        <h2 class="letra" id="dinero">Dinero: <span></span>
+        </h2>
+        </ul>
+      </section>
     </main>
-
     <footer>
-
+      <div class="mt-5">
+      </div>
     </footer>
 
-
-
-
-    <script src="./JS/script.js"></script>
     <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/script.js"></script>
 </body>
 </html>

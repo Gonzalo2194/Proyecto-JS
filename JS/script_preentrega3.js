@@ -1,4 +1,3 @@
-
 class Producto {
     constructor(id, nombre, precio, categoria, imagen){
         this.id = id;
@@ -56,11 +55,23 @@ function cargarProductos(productos) {
                     <img class ="img" src="asset/${producto.imagen}"< />
                 </div>
         </section>        
-                <a href="#" class= "letrapedido botonagregar" data-id="${producto.id}">Agregar al carrito</a>
+                <a href="#" class= "letrapedido btnAgregar" data-id="${producto.id}">Agregar al carrito</a>
                 </div>
             `;
     }
 
+
+    const botonesAgregar = document.querySelectorAll(".btnAgregar");
+    
+    for (const boton of botonesAgregar) {
+        boton.addEventListener("click", (event) => {
+            event.preventDefault();
+            const idProducto = +boton.dataset.id;
+            console.log("id del producto", idProducto);
+        })
+    }
 }
+
+
 
 

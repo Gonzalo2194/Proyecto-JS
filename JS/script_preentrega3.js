@@ -49,15 +49,14 @@ class Carrito{
     estaEnCarrito({ id }){
         return this.carrito.find((producto) => producto.id == id);
     }
-
-    agregar(producto){
+    agregar(producto) {
         const productoEncarrito = this.estaEnCarrito(producto);
-
-        if(productoEncarrito){
-            this.carrito.push({...producto,cantidad: 1 });
-
+    
+        if (!productoEncarrito) {
+            this.carrito.push({...producto, cantidad: 1 });
         } else {
-            productoEnCarrito.cantidad++;  
+            productoEncarrito.cantidad++; 
+            
         }
         this.listar();
     }
@@ -67,7 +66,7 @@ class Carrito{
         if(this.carrito[indice].cantidad > 1 ){
             this.carrito [indice].cantidad--;
         } else{
-        this.carrito.splice (indice, 1);
+            this.carrito.splice (indice, 1);
         }
         this.listar();
     }
@@ -83,7 +82,7 @@ class Carrito{
                 <h2>${producto.nombre} </h2> 
                 <p>$${producto.precio} </p>
                 <p>Cantidad: ${producto.cantidad}</p>
-                <a>href="#" class= "btnQuitar" data-id="${producto.id}">Quitar del carrito"</a>
+                <a href="#" class= "btnQuitar" data-id="${producto.id}">Quitar del carrito</a>
             </div>
             `;
             this.total += producto.precio * producto.cantidad;
@@ -91,7 +90,7 @@ class Carrito{
         }
 
         const botonesQuitar = document.querySelectorAll(".btnQuitar");
-        for (const boton of botonesQuitar);
+        for (const boton of botonesQuitar)
             boton.addEventListener("click",(Event)=>{
                 Event.preventDefault();
                 const idProducto = Number(boton.dataset.id);
@@ -100,19 +99,13 @@ class Carrito{
     }
 }
 
-
-
-
-
 const bd = new Basedatos();
-
 const carrito = new Carrito();
-
 const divProductos = document.querySelector("#productos");
-const divCarrito = document.querySelector ("#carrito");
+const divCarrito = document.querySelector ("#Carrito");
 
 cargarProductos(bd.TraerRegistros());
-
+//
 function cargarProductos(productos) {
     divProductos.innerHTML= ""
     for (const producto of productos) {
@@ -143,7 +136,5 @@ function cargarProductos(productos) {
         });
     }
 }
-
-
 
 

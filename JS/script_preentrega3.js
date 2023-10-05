@@ -95,12 +95,18 @@ class Carrito{
                 Event.preventDefault();
                 const idProducto = Number(boton.dataset.id);
                 this.quitar(idProducto);
-            })
-    }
+            });
+            spanCantidadProductos.innerText = this.cantidadProductos;
+            spanTotalCarrito.innerText = this.total;  
+        }       
+    
 }
+
 
 const bd = new Basedatos();
 const carrito = new Carrito();
+const spanCantidadProductos = document.querySelector("#Cantidadproductos");  
+const spanTotalCarrito = document.querySelector("#totalcarrito");
 const divProductos = document.querySelector("#productos");
 const divCarrito = document.querySelector ("#Carrito");
 
